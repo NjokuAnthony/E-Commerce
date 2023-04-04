@@ -37,7 +37,7 @@ header{
     left: 0;
     background: var(--bg-color);
     box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
-    padding: 10px 100px;
+    /* padding: 0px 100px; */
     z-index: 100;
 }
 
@@ -46,25 +46,33 @@ header{
     padding: 20px 0;
     justify-content: space-between;
     align-items: center;
+    /* text-align: center; */
+    padding: 20px 100px;
 }
 .logo{
     font-weight: 400;
     font-size: 1.1rem;
     color: var(--text-color);
+    /* padding-right: 50px; */
 }
-#cart{
+#cart-icon{
     font-size: 1.8rem;
     cursor: pointer;
+    /* padding-right: 50px; */
 }
 .cart{
     position: fixed;
-    right: 0;
+    right: -100%;
     top: 0;
     width: 360px;
     height: 100vh;
     padding: 20px;
     background: var(--bg-color);
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transform: 0.3s;
+}
+.cart.active{
+    right: 0;
 }
 .cart-title{
     text-align: center;
@@ -73,7 +81,7 @@ header{
     margin-top: 2rem;
 }
 .cart-box{
-    display: grid;
+    display: grid;   
     grid-template-columns: 32% 50% 18%;
     align-items: center;
     gap: 1rem;
